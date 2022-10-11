@@ -1,0 +1,104 @@
+
+$breakpoint-mobile: 767px;
+@mixin mobile {
+    @media (max-width: $breakpoint-mobile) {
+      @content;
+    }
+}
+
+#wrapper-navbar {
+    padding: 15px 0;
+	nav#main-nav {
+		background-color: #fff !important;
+		>.container {
+            position: relative;
+			.custom-logo-link {
+				img {
+					max-width: 200px;
+                    @include mobile(){
+                        max-width: 120px;
+                    }
+				}
+			}
+            div#navbarNavDropdown {
+                ul {
+                    @include mobile(){
+                        margin-top: 15px;
+                    }
+                    li {
+                        a {
+                            color: #000;
+                            position: relative;
+                            padding-left: 1rem;
+                            padding-right: 1rem;
+                            &:before{
+                                content: '';
+                                position: absolute;
+                                width: 0;
+                                height: 1px;
+                                left: 50%;
+                                bottom: 0;
+                                transform: translateX(-50%);
+                                background: #000;
+                                transition: width .4s ease;
+                            }
+                            &:hover{
+                                &:before{
+                                    width: calc(100% - 2rem);
+                                }
+                            }
+                        }
+                    }
+                }            
+            } 
+            button.navbar-toggler {
+                background: #190935;
+            }
+            .right-side-header-widget {
+                padding-left: 1rem;
+                @include mobile(){
+                    position: absolute;
+                    right: 75px;
+                    top: 9px;
+                }
+            }  
+		}
+	}
+}
+
+.wrapper{
+    padding: 0;
+}
+
+.hover-btn{
+    a {
+        transition: background-color .4s ease;
+        text-decoration: none;
+        &:hover {
+            background-color: #59dac3 !important;
+            color: #000;
+        }
+    }
+}
+
+#wrapper-footer-full{
+    background-color: #190935;
+}
+
+@include mobile(){
+    .min-mob-height{
+        min-height: 35vh !important;
+    }
+    .mob-center-text{
+        text-align: center;
+    }
+    .mob-justify-center{
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 992px){
+    .mob-no-right-padding{
+        padding-right: 0 !important;
+    }
+}

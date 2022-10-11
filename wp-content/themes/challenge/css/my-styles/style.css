@@ -1,0 +1,68 @@
+#wrapper-navbar {
+  padding: 15px 0; }
+  #wrapper-navbar nav#main-nav {
+    background-color: #fff !important; }
+    #wrapper-navbar nav#main-nav > .container {
+      position: relative; }
+      #wrapper-navbar nav#main-nav > .container .custom-logo-link img {
+        max-width: 200px; }
+        @media (max-width: 767px) {
+          #wrapper-navbar nav#main-nav > .container .custom-logo-link img {
+            max-width: 120px; } }
+      @media (max-width: 767px) {
+        #wrapper-navbar nav#main-nav > .container div#navbarNavDropdown ul {
+          margin-top: 15px; } }
+      #wrapper-navbar nav#main-nav > .container div#navbarNavDropdown ul li a {
+        color: #000;
+        position: relative;
+        padding-left: 1rem;
+        padding-right: 1rem; }
+        #wrapper-navbar nav#main-nav > .container div#navbarNavDropdown ul li a:before {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 1px;
+          left: 50%;
+          bottom: 0;
+          transform: translateX(-50%);
+          background: #000;
+          transition: width .4s ease; }
+        #wrapper-navbar nav#main-nav > .container div#navbarNavDropdown ul li a:hover:before {
+          width: calc(100% - 2rem); }
+      #wrapper-navbar nav#main-nav > .container button.navbar-toggler {
+        background: #190935; }
+      #wrapper-navbar nav#main-nav > .container .right-side-header-widget {
+        padding-left: 1rem; }
+        @media (max-width: 767px) {
+          #wrapper-navbar nav#main-nav > .container .right-side-header-widget {
+            position: absolute;
+            right: 75px;
+            top: 9px; } }
+
+.wrapper {
+  padding: 0; }
+
+.hover-btn a {
+  transition: background-color .4s ease;
+  text-decoration: none; }
+  .hover-btn a:hover {
+    background-color: #59dac3 !important;
+    color: #000; }
+
+#wrapper-footer-full {
+  background-color: #190935; }
+
+@media (max-width: 767px) {
+  .min-mob-height {
+    min-height: 35vh !important; }
+
+  .mob-center-text {
+    text-align: center; }
+
+  .mob-justify-center {
+    justify-content: center !important; } }
+@media (max-width: 992px) {
+  .mob-no-right-padding {
+    padding-right: 0 !important; } }
+
+/*# sourceMappingURL=style.css.map */
